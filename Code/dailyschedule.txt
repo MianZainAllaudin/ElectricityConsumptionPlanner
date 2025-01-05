@@ -1,0 +1,59 @@
+
+1 P.M,* , , , , 
+2 P.M,* , , , , 
+3 P.M,* , , , , 
+4 P.M,* , , , , 
+5 P.M,* , , , , 
+6 P.M,*, , , , 
+7 P.M, ,* , , , 
+8 P.M, , * , , , 
+9 P.M, , , , ,
+10 P.M, , , , ,
+11 P.M, , , , ,
+12 P.M, , , , ,
+1 A.M, , , , ,
+2 A.M, , , , ,
+3 A.M, , , , ,
+4 A.M, , , , ,
+5 A.M, , , , ,
+6 A.M, , , , ,
+7 A.M, , , , ,
+8 A.M, , , , ,
+9 A.M, , , , ,
+10 A.M, , , , ,
+11 A.M, , , , ,
+12 A.M, , , , ,
+void PopulateTable() {
+    try {
+        // Path to the appliance data file
+        String^ filePath = "dailyschedule.txt";
+
+        // Check if the file exists
+        if (!File::Exists(filePath)) {
+            MessageBox::Show("Data file not found!", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+            return;
+        }
+
+        // Open the file for reading using StreamReader
+        StreamReader^ reader = gcnew StreamReader(filePath);
+
+        String^ line;
+        while ((line = reader->ReadLine()) != nullptr) {
+            // Split the line into columns
+            array<String^>^ columns = line->Split(',');
+
+            if (columns->Length == 6) { // Ensure the line has 6 values
+                dataGridView1->Rows->Add(columns[0], columns[1], columns[2],columns[3],columns[4],columns[5]);
+            }
+            else {
+                MessageBox::Show("Invalid data format in file.", "Warning", MessageBoxButtons::OK, MessageBoxIcon::Warning);
+            }
+        }
+
+        // Close the reader
+        reader->Close();
+    }
+    catch (Exception^ ex) {
+        MessageBox::Show("An error occurred while loading data: " + ex->Message, "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+    }
+}

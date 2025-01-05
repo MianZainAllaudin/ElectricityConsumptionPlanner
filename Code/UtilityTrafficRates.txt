@@ -1,0 +1,10 @@
+Lahore,Iqbal Town,26.11,0.45
+Karachi,Gulshan-e-Iqbal,27.50,0.50
+Islamabad,F-6,25.53,0.40
+Peshawar,Hayatabad,24.00,0.35
+Quetta,Satellite Town,23.73,0.30
+Lahore,Johar Town,29.74,0.50
+Karachi,Defence,34.27,0.55
+Islamabad,G-10,28.00,0.45
+Peshawar,University Town,25.00,0.38
+Quetta,Cantt,22.85,0.25

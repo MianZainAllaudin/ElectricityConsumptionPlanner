@@ -1,0 +1,11 @@
+AC,700,3,2 A.M.,Monday.Thursday
+WaterDispenser,200,5,11 A.M.,Friday
+Television,300,5,6 P.M.,Monday.Wednesday.Friday
+Refrigerator,600,19,4 A.M.,Monday.Tuesday.Wednesday.Friday
+LED/LCD,200,6,11 A.M.,Monday.Tuesday.Wednesday.Friday
+WashingMachine,400,2,9 A.M.,Sunday
+WashingMachine,200,3,6 P.M.,Sunday
+Heater ,200,1,7 A.M.,Thursday
+AC,50,6,6 A.M.,Monday.Tuesday
+Light,50,8,3 P.M.,Monday.Tuesday
+Light,50,8,3 P.M.,Monday.Tuesday.Friday
